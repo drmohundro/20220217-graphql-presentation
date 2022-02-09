@@ -1,0 +1,11 @@
+query {
+  allPlanets(first: 1) {
+    planets {
+      filmConnection {
+        films {
+          title
+        }
+      }
+    }
+  }
+}

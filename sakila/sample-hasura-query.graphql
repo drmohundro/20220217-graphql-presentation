@@ -1,0 +1,19 @@
+query {
+  film(where: {description: {_ilike: "%epic%"}, language: {name: {_eq: "English"}}}) {
+    title
+    rating
+    description
+    length
+    film_categories {
+      category {
+        name
+      }
+    }
+    film_actors(limit: 1) {
+      actor {
+        first_name
+        last_name
+      }
+    }
+  }
+}
